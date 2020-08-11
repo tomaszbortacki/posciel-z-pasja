@@ -1,0 +1,17 @@
+.home {
+  height: 100vh;
+  display: grid;
+  grid-template-rows: minmax(500px, 1fr) 70px;
+}
+
+.home__top .carousel {
+  height: 100%;
+}
+
+.home__top .carousel .carousel-inner {
+  height: 100%;
+}
+
+.home__top .carousel .carousel-inner .carousel-item {
+  height: 100%;
+}
