@@ -1,0 +1,52 @@
+.footer {
+    height: 100%;
+    background-color: $c1;
+    padding: 2rem 0;
+
+    .container {
+        height: 100%;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+
+        .link {
+            color: $c3;
+            font-weight: 500;
+            font-size: 16px;
+            line-height: 100%;
+            letter-spacing: 0.3px;
+            text-decoration: none !important;
+            transition: color 0.3s ease;
+            will-change: color;
+
+            &:hover {
+                color: $c2;
+            }
+        }
+
+        section {
+            &:first-child {
+                .link {
+                    margin-right: 3rem;
+
+                }
+            }
+
+            &:last-child {
+                .link {
+                    margin-left: 3rem;
+                }
+            }
+        }
+    }
+}
+
+.category {
+    .footer {
+        background-color: $c4;
+
+        .link {
+            color: $c1;
+        }
+    }
+}

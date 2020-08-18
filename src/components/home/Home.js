@@ -1,18 +1,10 @@
-import React, { useState, useEffect } from 'react';
-import { API, CATEGORIES } from "../../utils/api";
-import "./home.min.css";
+import React, { useState } from 'react';
+import { API } from "../../utils/api";
 import Slider from "../slider/Slider";
 import Carousel from 'react-bootstrap/Carousel'
+import Footer from "../footer/Footer";
 
-const Home = () => {
-    const [cat, setCat] = useState([]);
-    const getCategories = async () => {
-        const resp = await fetch(CATEGORIES).then(response => response.json()).then(data => { return data; });
-        setCat(resp);
-    }
-    useEffect(() => {
-        getCategories();
-    }, [])
+const Home = ({ pages, socials, categories }) => {
 
     const [index, setIndex] = useState(0);
 
@@ -24,7 +16,7 @@ const Home = () => {
         <section className="home">
             <section className="home__top">
                 <Carousel activeIndex={index} onSelect={handleSelect}>
-                    {cat.map((CAT, key) =>
+                    {categories.map((CAT, key) =>
                         <Carousel.Item key={key}>
                             <Slider name={CAT.Name} desc={CAT.Description} img={`${API}${CAT.Photo.url}`} link={CAT.Link} />
                         </Carousel.Item>
@@ -32,7 +24,7 @@ const Home = () => {
                 </Carousel>
             </section>
             <section className="home__bottom">
-                footer
+                <Footer pages={pages} socials={socials} />
             </section>
         </section>
     );

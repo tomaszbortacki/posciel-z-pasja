@@ -1,0 +1,7 @@
+.subpage {
+
+    &__desc {
+        @include default-margin;
+        @include main-text(18px, 32px, "text", 400, true, true);
+    }
+}

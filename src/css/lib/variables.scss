@@ -1,0 +1,53 @@
+// Colors 
+
+$c1: #fff;
+$c2: #000;
+$c3: #333;
+$c4: #DAA520;
+$c5: #222;
+$c6: #333;
+
+// Shadow
+
+$s1: 0 20px 50px rgba(0, 0, 0, .05);
+
+// Radius
+
+$r1: 20px;
+
+// Easing
+
+$e1: 0.3s ease;
+$e2: 0.7s ease;
+
+/* ZMIENNE DLA MEDIA QUERIES */
+$msm: "only screen and (max-width : 575px)";
+$sm: "only screen and (min-width : 576px)";
+$mmd: "only screen and (max-width : 767px)";
+$md: "only screen and (min-width : 768px)";
+$mlg: "only screen and (max-width : 991px)";
+$lg: "only screen and (min-width : 992px)";
+$mxl: "only screen and (max-width : 1199px)";
+$xl: "only screen and (min-width : 1200px)";
+$msl: "only screen and (max-width : 1299px)";
+$sl: "only screen and (min-width : 1300px)";
+$mxxl: "only screen and (max-width : 1429px)";
+$xxl: "only screen and (min-width : 1430px)";
+$mxxxl: "only screen and (max-width : 1499px)";
+$xxxl: "only screen and (min-width : 1500px)";
+$hlg: "only screen and (min-width : 1800px)";
+$hxlg: "only screen and (min-width : 1921px)";
+
+.container {
+    @media #{$sl} {
+        max-width: 1230px;
+    }
+
+    @media #{$xxl} {
+        max-width: 1300px;
+    }
+
+    @media #{$hxlg} {
+        max-width: 1500px;
+    }
+}

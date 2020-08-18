@@ -1,7 +1,7 @@
 .home {
-    height: 100vh;
+    min-height: 100vh;
     display: grid;
-    grid-template-rows: minmax(500px, 1fr) 70px;
+    grid-template-rows: minmax(700px, 1fr) 100px;
 
     &__top {
         .carousel {
@@ -12,6 +12,54 @@
 
                 .carousel-item {
                     height: 100%;
+                }
+            }
+
+            .carousel-control-prev,
+            .carousel-control-next {
+                display: flex;
+                flex-direction: column;
+                justify-content: center;
+                text-align: center;
+
+                &::before {
+                    content: "";
+                    position: absolute;
+                    top: 0;
+                    left: 0;
+                    width: 100%;
+                    height: 100%;
+                    opacity: 0;
+                    transition: opacity $e1;
+                    will-change: opacity;
+                    z-index: 1;
+                }
+
+                span {
+                    transition: transform $e1;
+                    will-change: transform;
+                }
+
+                &:hover {
+                    &::before {
+                        opacity: 1;
+                    }
+
+                    span {
+                        transform: scale(1.5);
+                    }
+                }
+            }
+
+            .carousel-control-prev {
+                &::before {
+                    background-image: linear-gradient(to right, rgba(255, 255, 255, 0.05), transparent);
+                }
+            }
+
+            .carousel-control-next {
+                &::before {
+                    background-image: linear-gradient(to left, rgba(255, 255, 255, 0.05), transparent);
                 }
             }
         }

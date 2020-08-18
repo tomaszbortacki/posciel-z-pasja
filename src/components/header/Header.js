@@ -1,16 +1,20 @@
-import React from 'react';
-import "./header.min.css";
+import React, { useState } from 'react';
 import Nav from "../nav/Nav";
-import "bootstrap/dist/css/bootstrap.min.css";
 import { Container } from 'react-bootstrap';
+import { Link } from "react-router-dom";
+import logo from "../../images/logo.svg";
 
 
-const Header = () => {
+const Header = ({ categories }) => {
+
+    const [scrolled, setScrolled] = useState("");
+    window.addEventListener("scroll", () => setScrolled(window.pageYOffset > 0 ? " scrolled" : ""));
+
     return (
-        <header className="header">
+        <header className={`header${scrolled}`}>
             <Container>
-                <h1>Pościel z Pasją</h1>
-                <Nav />
+                <Link to="/"><img src={logo} alt="Pościel z Pasją" title="Pościel z pasją" className="header__logo" /></Link>
+                <Nav categories={categories} />
             </Container>
         </header>
     );

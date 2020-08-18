@@ -1,17 +1,22 @@
 .nav {
 
-
     .link {
         display: inline-block;
         margin: 0 1rem;
         padding: 0.5rem 0;
         text-decoration: none;
-        color: #fff;
+        color: $c1;
         letter-spacing: 0.3px;
         position: relative;
         overflow: hidden;
         font-weight: 500;
         font-size: 20px;
+        transition: color $e1;
+        will-change: color;
+
+        &:last-child {
+            margin-right: 0;
+        }
 
         &::after {
             content: "";
@@ -20,16 +25,24 @@
             left: 0;
             width: 100%;
             height: 2px;
-            background-color: #fff;
-            transform: translateX(-101%);
-            transition: transform 0.3s ease;
-            will-change: transform;
+            background-color: $c1;
+            opacity: 0;
+            transform: translateY(calc(-100% - 1px));
+            transition: transform $e1, opacity $e1, background-color $e1;
+            will-change: transform, opacity, background-color;
         }
 
+        &.active,
         &:hover {
-
             &::after {
-                transform: translateX(0%);
+                opacity: 1;
+                transform: translateY(0%);
+            }
+        }
+
+        &.active {
+            &::after {
+                background-color: $c4 !important;
             }
         }
     }

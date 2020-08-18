@@ -29,9 +29,9 @@
 
         h1 {
             letter-spacing: 0.3px;
-            margin-bottom: 5rem;
             font-size: 60px;
             font-weight: 900;
+            margin-bottom: 3rem;
 
             @media screen and (min-width: 1200px) {
                 font-size: 96px;
@@ -39,11 +39,12 @@
         }
 
         p {
+            margin: 2rem 0;
             max-width: 700px;
             width: 100%;
             font-weight: 300;
             letter-spacing: 0.3px;
-            padding: 2rem;
+            padding: 3rem;
             position: relative;
 
             &::before {
@@ -58,12 +59,10 @@
         }
 
         .link {
-            margin-top: 2rem;
             display: inline-block;
             background-color: #fff;
             color: #000;
             padding: 1.2rem 1.5rem;
-            border-radius: 20px;
             text-decoration: none !important;
             letter-spacing: 0.3px;
             line-height: 100%;

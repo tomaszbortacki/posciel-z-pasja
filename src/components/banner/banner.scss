@@ -1,0 +1,38 @@
+.banner {
+    padding: 240px 0 120px 0;
+    position: relative;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    background-color: $c4;
+
+    &--img {
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        z-index: 0;
+
+        img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            filter: brightness(0.4);
+        }
+    }
+
+    h1 {
+        position: relative;
+        color: $c1;
+        font-weight: 900;
+        letter-spacing: 0.3px;
+        font-size: 60px;
+        z-index: 1;
+
+        @media #{$xl} {
+            font-size: 96px;
+        }
+    }
+}

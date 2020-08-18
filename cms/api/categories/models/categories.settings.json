@@ -15,7 +15,8 @@
       "unique": true
     },
     "Description": {
-      "type": "richtext"
+      "type": "richtext",
+      "minLength": 250
     },
     "Photo": {
       "model": "file",
@@ -31,6 +32,11 @@
       "regex": "[a-z0-9]+",
       "required": true,
       "unique": true
+    },
+    "products": {
+      "collection": "products",
+      "via": "categories",
+      "dominant": true
     }
   }
 }
