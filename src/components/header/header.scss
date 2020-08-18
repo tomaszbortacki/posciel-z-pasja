@@ -7,6 +7,7 @@
     z-index: 999;
     transition: padding-top $e1, padding-bottom $e1, box-shadow $e1;
     will-change: padding-top, padding-bottom, box-shadow;
+    perspective: 1000px;
 
     &::before {
         content: "";
@@ -17,7 +18,7 @@
         height: 100%;
         background-color: $c1;
         z-index: -1;
-        transform: translateY(-100%);
+        transform: translateY(-100%) rotateX(-90deg);
         opacity: 0;
         transition: transform $e1, opacity $e1;
         will-change: transform, opacity;
@@ -29,7 +30,7 @@
 
         &::before {
             opacity: 1;
-            transform: translateY(0%);
+            transform: translateY(0%) rotateX(0deg);
         }
 
         .header {

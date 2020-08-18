@@ -211,7 +211,8 @@
         // }
 
         em {
-            font-size: calc(#{$size} * 1.2);
+            font-weight: 500;
+            // font-size: calc(#{$size} * 1.2);
         }
 
         table {
@@ -284,7 +285,7 @@
             color: inherit;
 
             &:hover {
-                color: $c1;
+                color: $c4;
             }
         }
 
