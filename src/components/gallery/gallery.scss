@@ -1,0 +1,29 @@
+.gallery {
+    @include default-margin;
+    column-count: 2;
+    column-gap: 1rem;
+    
+    @media #{$xl} {
+        column-count: 3;
+        column-gap: 2rem;
+    }
+
+    &--img {
+        display: block;
+        width: 100%;
+        @include default-animation("static");
+
+        &:not(:first-child) {
+            margin-top: 1rem;
+
+            @media #{$xl} {
+                margin-top: 2rem;
+            }
+        }
+
+
+        img {
+            width: 100%;
+        }
+    }
+}

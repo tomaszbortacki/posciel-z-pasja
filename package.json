@@ -16,7 +16,9 @@
     "react-responsive-carousel": "^3.2.9",
     "react-router": "^5.2.0",
     "react-router-dom": "^5.2.0",
-    "react-scripts": "3.4.1"
+    "react-scripts": "3.4.1",
+    "react-simple-lightbox": "^1.0.26",
+    "simple-react-lightbox": "^3.3.4-1"
   },
   "scripts": {
     "start": "react-scripts start",
