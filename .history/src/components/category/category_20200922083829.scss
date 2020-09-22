@@ -29,8 +29,9 @@
       position: relative;
       overflow: hidden;
       outline: 5px solid transparent;
+      transition: outline-color $e1;
+      will-change: outline-color;
       padding-bottom: calc(3 / 4 * 100%);
-      @include default-animation("static");
 
       &__img {
         position: absolute;

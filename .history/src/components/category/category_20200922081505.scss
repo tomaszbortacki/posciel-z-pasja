@@ -1,0 +1,97 @@
+.category {
+
+    &__desc {
+        @include default-margin;
+        @include main-text(18px, 32px, "text", 400, true, true);
+    }
+
+    &__products {
+        @include default-margin;
+        display: grid;
+        grid-gap: 1rem;
+        gap: 1rem;
+        --c: 2;
+
+        @media #{$md} {
+            grid-gap: 2rem;
+            gap: 2rem;
+            --c: 3;
+        }
+
+        @media #{$xl} {
+            --c: 4;
+        }
+
+        grid-template-columns: repeat(var(--c), 1fr);
+
+        .category-product {
+            min-height: 200px;
+            width: 100%;
+            max-width: 500px;
+            position: relative;
+            overflow: hidden;
+            outline: 5px solid transparent;
+            transition: outline-color $e1;
+            will-change: outline-color;
+
+            &__img {
+                width: 100%;
+                height: 270px;
+                background-color: $c3;
+                transition: transform $e1;
+                will-change: transform;
+
+                @media #{$xl} {
+                    height: 400px;
+                }
+
+                img {
+                    height: 100%;
+                    width: calc(100% + 2px);
+                    object-fit: cover;
+                }
+            }
+
+            &__desc {
+                position: absolute;
+                bottom: 0;
+                left: 0;
+                background-color: transparentize($c1, 0.8);
+                color: $c1;
+                width: 100%;
+                padding: 1rem;
+                transition: transform $e1;
+                will-change: transform;
+
+                @media #{$md} {
+                    transform: translateY(100%);
+                }
+
+                h2 {
+                    font-size: 16px;
+                    line-height: 100%;
+                    letter-spacing: 0.3px;
+
+                    @media #{$xl} {
+                        font-size: 18px;
+                    }
+                }
+            }
+
+            &:hover {
+                outline-color: $c4;
+
+                .category-product {
+
+                    &__img {
+                        transform: scale(1.1);
+                    }
+
+                    &__desc {
+                        transform: translateY(0%);
+                    }
+                }
+            }
+        }
+    }
+}

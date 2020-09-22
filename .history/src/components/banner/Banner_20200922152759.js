@@ -10,7 +10,7 @@ const Banner = ({ element, photos }) => {
     <section className="banner">
       <ParallaxProvider>
         {PHOTOS[0] ? (
-          <Parallax className="banner--img" y={[-30, 30]} tagOuter="figure">
+          <Parallax className="banner--img" y={[-5, 5]} tagOuter="figure">
             <img
               src={`${API}${PHOTOS[0].url}`}
               alt={PHOTOS[0].alternativeText}

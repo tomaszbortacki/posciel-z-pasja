@@ -24,13 +24,15 @@
     grid-template-columns: repeat(var(--c), 1fr);
 
     .category-product {
+      min-height: 200px;
       width: 100%;
       max-width: 500px;
       position: relative;
       overflow: hidden;
       outline: 5px solid transparent;
+      transition: outline-color $e1;
+      will-change: outline-color;
       padding-bottom: calc(3 / 4 * 100%);
-      @include default-animation("static");
 
       &__img {
         position: absolute;
