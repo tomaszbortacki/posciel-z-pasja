@@ -1,0 +1,28 @@
+{
+  "files": {
+    "main.css": "/posciel-z-pasja/static/css/main.cbb4c650.chunk.css",
+    "main.js": "/posciel-z-pasja/static/js/main.82bdd994.chunk.js",
+    "main.js.map": "/posciel-z-pasja/static/js/main.82bdd994.chunk.js.map",
+    "runtime-main.js": "/posciel-z-pasja/static/js/runtime-main.6317491c.js",
+    "runtime-main.js.map": "/posciel-z-pasja/static/js/runtime-main.6317491c.js.map",
+    "static/css/2.d9ad5f5c.chunk.css": "/posciel-z-pasja/static/css/2.d9ad5f5c.chunk.css",
+    "static/js/2.d141c2e6.chunk.js": "/posciel-z-pasja/static/js/2.d141c2e6.chunk.js",
+    "static/js/2.d141c2e6.chunk.js.map": "/posciel-z-pasja/static/js/2.d141c2e6.chunk.js.map",
+    "index.html": "/posciel-z-pasja/index.html",
+    "precache-manifest.edabf76284ca8700478eab0f8827f026.js": "/posciel-z-pasja/precache-manifest.edabf76284ca8700478eab0f8827f026.js",
+    "service-worker.js": "/posciel-z-pasja/service-worker.js",
+    "static/css/2.d9ad5f5c.chunk.css.map": "/posciel-z-pasja/static/css/2.d9ad5f5c.chunk.css.map",
+    "static/css/main.cbb4c650.chunk.css.map": "/posciel-z-pasja/static/css/main.cbb4c650.chunk.css.map",
+    "static/js/2.d141c2e6.chunk.js.LICENSE.txt": "/posciel-z-pasja/static/js/2.d141c2e6.chunk.js.LICENSE.txt",
+    "static/media/logo.svg": "/posciel-z-pasja/static/media/logo.e881c64b.svg",
+    "static/media/mail.svg": "/posciel-z-pasja/static/media/mail.8c231b15.svg",
+    "static/media/phone.svg": "/posciel-z-pasja/static/media/phone.e6ba86c0.svg"
+  },
+  "entrypoints": [
+    "static/js/runtime-main.6317491c.js",
+    "static/css/2.d9ad5f5c.chunk.css",
+    "static/js/2.d141c2e6.chunk.js",
+    "static/css/main.cbb4c650.chunk.css",
+    "static/js/main.82bdd994.chunk.js"
+  ]
+}
