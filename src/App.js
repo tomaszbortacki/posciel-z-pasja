@@ -6,6 +6,7 @@ import Home from "./components/home/Home";
 import Category from "./components/category/Category";
 import Product from "./components/product/Product";
 import Subpage from "./components/subpage/Subpage";
+import Meta from "./components/meta/Meta";
 import { BrowserRouter as Router, Switch, Route } from "react-router-dom";
 import { GETTERS } from "./utils/api";
 
@@ -14,6 +15,7 @@ function App() {
   const [products, setProducts] = useState([]);
   const [pages, setPages] = useState([]);
   const [socials, setSocials] = useState([]);
+  const [contact, setContact] = useState([]);
   const getData = (LINK, SETTER) => {
     fetch(LINK)
       .then((response) => response.json())
@@ -25,10 +27,12 @@ function App() {
     getData(GETTERS.products, setProducts);
     getData(GETTERS.pages, setPages);
     getData(GETTERS.socials, setSocials);
+    getData(GETTERS.contact, setContact);
   }, []);
 
   return (
     <section className="app">
+      <Meta title={contact.Title} />
       <Router>
         <Header categories={cat} />
         <Switch>
@@ -37,7 +41,12 @@ function App() {
           </Route>
           {pages.map((page, key) => (
             <Route path={`/${page.Link}`} key={key}>
-              <Subpage subpage={page} pages={pages} socials={socials} />
+              <Subpage
+                subpage={page}
+                pages={pages}
+                socials={socials}
+                pageTitle={contact.Title}
+              />
             </Route>
           ))}
           {cat.map((CAT, key) => (
@@ -47,12 +56,19 @@ function App() {
                 products={CAT.products}
                 pages={pages}
                 socials={socials}
+                pageTitle={contact.Title}
               />
             </Route>
           ))}
           {products.map((product, key) => (
             <Route path={`/${product.Link}`} key={key}>
-              <Product product={product} pages={pages} socials={socials} />
+              <Product
+                product={product}
+                pages={pages}
+                socials={socials}
+                contact={contact}
+                pageTitle={contact.Title}
+              />
             </Route>
           ))}
         </Switch>

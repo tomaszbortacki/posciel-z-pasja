@@ -1,4 +1,7 @@
 .nav {
+    @media #{$mxl} {
+        display: none;
+    }
 
     .link {
         display: inline-block;

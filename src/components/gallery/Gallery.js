@@ -16,6 +16,7 @@ const Gallery = ({ photos }) => {
               alt={photo.alternativeText}
               title={photo.alternativeText}
             >
+              <div className="cover"></div>
               <img
                 src={`${API}${photo.formats.small.url}`}
                 alt={photo.alternativeText}

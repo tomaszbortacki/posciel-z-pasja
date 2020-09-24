@@ -7,7 +7,6 @@
     z-index: 999;
     transition: padding-top $e1, padding-bottom $e1, box-shadow $e1;
     will-change: padding-top, padding-bottom, box-shadow;
-    perspective: 1000px;
 
     &::before {
         content: "";
@@ -18,7 +17,7 @@
         height: 100%;
         background-color: $c1;
         z-index: -1;
-        transform: translateY(-100%) rotateX(-90deg);
+        transform: translateY(-100%);
         opacity: 0;
         transition: transform $e1, opacity $e1;
         will-change: transform, opacity;
@@ -30,7 +29,7 @@
 
         &::before {
             opacity: 1;
-            transform: translateY(0%) rotateX(0deg);
+            transform: translateY(0%);
         }
 
         .header {
@@ -51,10 +50,18 @@
     }
 
     &__logo {
-        max-height: 60px;
+        max-height: 40px;
         transition: filter $e1;
         will-change: filter;
         filter: brightness(0) invert(1);
+
+        @media #{$md} {
+            max-height: 50px;
+        }
+
+        @media #{$xl} {
+            max-height: 60px;
+        }
 
     }
 

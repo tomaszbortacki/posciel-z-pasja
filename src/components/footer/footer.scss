@@ -9,6 +9,17 @@
         justify-content: space-between;
         align-items: center;
 
+        @media #{$mxl} {
+
+            section {
+                display: flex;
+                flex-direction: column;
+                .link {
+                    margin: 0.5rem 0 !important;
+                }
+            }
+        }
+
         .link {
             color: $c3;
             font-weight: 500;

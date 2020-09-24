@@ -5,10 +5,17 @@ import { API } from "../../utils/api";
 import { Link } from "react-router-dom";
 import Banner from "../banner/Banner";
 import Description from "../description/Description";
+import Meta from "../meta/Meta";
 
-const Category = ({ category, products, pages, socials }) => {
+const Category = ({ category, products, pages, socials, pageTitle }) => {
   return (
     <main className="category">
+      <Meta
+        title={`${category.Name} - ${pageTitle}`}
+        description={category.Description ? category.Description : ""}
+        image={category.Photo ? category.Photo.formats.medium.url : ""}
+        imageAlt={category.Photo ? category.Photo.alternativeText : ""}
+      />
       <Banner element={category} photos={category.Photo} />
       <Container>
         <section className="category__desc">
