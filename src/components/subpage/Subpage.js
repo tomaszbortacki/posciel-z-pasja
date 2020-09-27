@@ -5,7 +5,7 @@ import { Container } from "react-bootstrap";
 import Description from "../description/Description";
 import Meta from "../meta/Meta";
 
-const Subpage = ({ subpage, pages, socials, pageTitle }) => {
+const Subpage = ({ subpage, pages, socials, pageTitle, copy }) => {
   return (
     <main className="subpage">
       <Meta
@@ -24,7 +24,7 @@ const Subpage = ({ subpage, pages, socials, pageTitle }) => {
           )}
         </section>
       </Container>
-      <Footer pages={pages} socials={socials} />
+      <Footer pages={pages} socials={socials} copyrights={copy} />
     </main>
   );
 };

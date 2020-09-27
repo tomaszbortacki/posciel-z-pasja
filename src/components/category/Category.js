@@ -7,7 +7,7 @@ import Banner from "../banner/Banner";
 import Description from "../description/Description";
 import Meta from "../meta/Meta";
 
-const Category = ({ category, products, pages, socials, pageTitle }) => {
+const Category = ({ category, products, pages, socials, pageTitle, copy }) => {
   return (
     <main className="category">
       <Meta
@@ -52,7 +52,7 @@ const Category = ({ category, products, pages, socials, pageTitle }) => {
           ))}
         </section>
       </Container>
-      <Footer pages={pages} socials={socials} />
+      <Footer pages={pages} socials={socials} copyrights={copy} />
     </main>
   );
 };

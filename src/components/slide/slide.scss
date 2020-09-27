@@ -1,4 +1,4 @@
-.slider {
+.slide {
   height: 100%;
   position: relative;
   padding: 200px 0;
@@ -29,14 +29,9 @@
     height: 100%;
 
     h1 {
-      letter-spacing: 0.3px;
-      font-size: 60px;
-      font-weight: 900;
       margin-bottom: 1rem;
-
-      @media screen and (min-width: 1200px) {
-        font-size: 96px;
-      }
+      letter-spacing: 0.3px;
+      @include main-text(98px, 104px, "header", 400, false, true);
     }
 
     p {
@@ -45,13 +40,13 @@
       width: 100%;
       letter-spacing: 0.3px;
       position: relative;
-      @include main-text(18px, 32px, "text", 400, true, true);
+      @include main-text(18px, 32px, "text", 300, true, true);
     }
 
     .link {
       margin-top: 3rem;
       display: inline-block;
-      background-color: #fff;
+      background-color: $c1;
       color: #000;
       padding: 1.2rem 1.5rem;
       text-decoration: none !important;

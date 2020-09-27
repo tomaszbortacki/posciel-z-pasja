@@ -47,6 +47,35 @@
                 }
             }
         }
+
+        .mobile-button {
+            .bar {
+                background-color: $c2;
+            }
+        }
+    }
+    
+    @media #{$mxl} {
+        &.active {
+            padding: 3rem 0;
+            background-color: $c4;
+
+            &::before {
+                display: none;
+            }
+
+            .header {
+                &__logo {
+                    filter: brightness(0) invert(1);
+                }
+            }
+
+            .mobile-button {
+                .bar {
+                    background-color: $c1;
+                }
+            }
+        }
     }
 
     &__logo {

@@ -7,8 +7,7 @@ import Gallery from "../gallery/Gallery";
 import Cta from "../cta/Cta";
 import Meta from "../meta/Meta";
 
-const Product = ({ product, pages, socials, contact, pageTitle }) => {
-  console.log(product);
+const Product = ({ product, pages, socials, contact, pageTitle, copy }) => {
   return (
     <main className="product">
       <Meta
@@ -29,7 +28,7 @@ const Product = ({ product, pages, socials, contact, pageTitle }) => {
         <Gallery photos={product.Photos} />
         <Cta contact={contact} />
       </Container>
-      <Footer pages={pages} socials={socials} />
+      <Footer pages={pages} socials={socials} copyrights={copy} />
     </main>
   );
 };

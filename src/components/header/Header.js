@@ -4,15 +4,16 @@ import { Container } from "react-bootstrap";
 import { Link } from "react-router-dom";
 import logo from "../../images/logo.svg";
 import { BASE } from "../../utils/api";
+import MobileButton from "../mobile/MobileButton";
 
-const Header = ({ categories }) => {
+const Header = ({ categories, pages, mobileActive, setMobileActive }) => {
   const [scrolled, setScrolled] = useState("");
   window.addEventListener("scroll", () =>
     setScrolled(window.pageYOffset > 0 ? " scrolled" : "")
   );
 
   return (
-    <header className={`header${scrolled}`}>
+    <header className={`header${scrolled}${mobileActive ? " active" : ""}`}>
       <Container>
         <Link to={`${BASE}/`}>
           <img
@@ -22,7 +23,11 @@ const Header = ({ categories }) => {
             className="header__logo"
           />
         </Link>
-        <Nav categories={categories} />
+        <MobileButton
+          mobileActive={mobileActive}
+          setMobileActive={setMobileActive}
+        />
+        <Nav categories={categories} pages={pages} />
       </Container>
     </header>
   );

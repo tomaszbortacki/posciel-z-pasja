@@ -1,5 +1,6 @@
 import React from "react";
 import SimpleReactLightbox, { SRLWrapper } from "simple-react-lightbox";
+import Search from "../../images/search.svg";
 
 const Gallery = ({ photos }) => {
   return (
@@ -15,7 +16,10 @@ const Gallery = ({ photos }) => {
               alt={photo.alternativeText}
               title={photo.alternativeText}
             >
-              <div className="cover"></div>
+              <div
+                className="cover"
+                style={{ backgroundImage: `url('${Search}')` }}
+              ></div>
               <img
                 src={photo.formats.small.url}
                 alt={photo.alternativeText}

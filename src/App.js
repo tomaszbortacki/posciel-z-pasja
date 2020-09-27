@@ -1,14 +1,17 @@
 import React, { useState, useEffect } from "react";
 import "bootstrap/dist/css/bootstrap.min.css";
 import "./css/app.scss";
+import ScrollToTop from "./components/scrollToTop/ScrollToTop";
 import Header from "./components/header/Header";
 import Home from "./components/home/Home";
 import Category from "./components/category/Category";
 import Product from "./components/product/Product";
 import Subpage from "./components/subpage/Subpage";
+import MobileMenu from "./components/mobile/MobileMenu";
 import Meta from "./components/meta/Meta";
 import { BrowserRouter as Router, Switch, Route } from "react-router-dom";
 import { GETTERS, BASE } from "./utils/api";
+import Favicon from "react-favicon";
 
 function App() {
   const [cat, setCat] = useState([]);
@@ -16,6 +19,8 @@ function App() {
   const [pages, setPages] = useState([]);
   const [socials, setSocials] = useState([]);
   const [contact, setContact] = useState([]);
+  const [mobileActive, setMobileActive] = useState(false);
+
   const getData = (LINK, SETTER) => {
     fetch(LINK)
       .then((response) => response.json())
@@ -32,12 +37,29 @@ function App() {
 
   return (
     <section className="app">
+      {contact.Favicon ? <Favicon url={contact.Favicon.url} /> : ""}
       <Meta title={contact.Title} />
       <Router>
-        <Header categories={cat} />
+        <ScrollToTop setMobileActive={setMobileActive} />
+        <MobileMenu
+          categories={cat}
+          pages={pages}
+          mobileActive={mobileActive}
+        />
+        <Header
+          categories={cat}
+          pages={pages}
+          mobileActive={mobileActive}
+          setMobileActive={setMobileActive}
+        />
         <Switch>
           <Route path={`${BASE}/`} exact>
-            <Home pages={pages} socials={socials} categories={cat} />
+            <Home
+              pages={pages}
+              socials={socials}
+              categories={cat}
+              copy={contact.Copyrights}
+            />
           </Route>
           {pages.map((page, key) => (
             <Route path={`${BASE}/${page.Link}`} key={key}>
@@ -46,6 +68,7 @@ function App() {
                 pages={pages}
                 socials={socials}
                 pageTitle={contact.Title}
+                copy={contact.Copyrights}
               />
             </Route>
           ))}
@@ -57,6 +80,7 @@ function App() {
                 pages={pages}
                 socials={socials}
                 pageTitle={contact.Title}
+                copy={contact.Copyrights}
               />
             </Route>
           ))}
@@ -68,6 +92,7 @@ function App() {
                 socials={socials}
                 contact={contact}
                 pageTitle={contact.Title}
+                copy={contact.Copyrights}
               />
             </Route>
           ))}

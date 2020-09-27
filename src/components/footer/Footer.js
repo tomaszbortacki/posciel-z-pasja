@@ -1,9 +1,7 @@
 import React from "react";
 import { Container } from "react-bootstrap";
-import { Link } from "react-router-dom";
-import { BASE } from "../../utils/api";
 
-const Footer = ({ pages, socials }) => {
+const Footer = ({ socials, copyrights }) => {
   return (
     <footer className="footer">
       <Container>
@@ -22,19 +20,7 @@ const Footer = ({ pages, socials }) => {
             </a>
           ))}
         </section>
-        <section>
-          {pages.map((page, key) => (
-            <Link
-              to={`${BASE}/${page.Link}`}
-              className="link"
-              title={page.Name}
-              alt={page.Name}
-              key={key}
-            >
-              {page.Name}
-            </Link>
-          ))}
-        </section>
+        <p className="copyrights">{copyrights}</p>
       </Container>
     </footer>
   );

@@ -1,34 +1,40 @@
-import React, { useState } from "react";
-import Slider from "../slider/Slider";
-import Carousel from "react-bootstrap/Carousel";
+import React from "react";
+import Slide from "../slide/Slide";
 import Footer from "../footer/Footer";
+import Slider from "react-slick";
+import "slick-carousel/slick/slick.css";
+import "slick-carousel/slick/slick-theme.css";
 
-const Home = ({ pages, socials, categories }) => {
-  const [index, setIndex] = useState(0);
-
-  const handleSelect = (selectedIndex, e) => {
-    setIndex(selectedIndex);
+const Home = ({ pages, socials, categories, copy }) => {
+  const settings = {
+    arrows: false,
+    dots: true,
+    infinite: true,
+    speed: 900,
+    slidesToShow: 1,
+    slidesToScroll: 1,
+    autoplay: true,
+    autoplaySpeed: 3000,
+    cssEase: "cubic-bezier(0.7, 0, 0.3, 1)",
   };
-  console.log(categories);
 
   return (
     <section className="home">
       <section className="home__top">
-        <Carousel activeIndex={index} onSelect={handleSelect}>
+        <Slider {...settings}>
           {categories.map((CAT, key) => (
-            <Carousel.Item key={key}>
-              <Slider
-                name={CAT.Name}
-                desc={CAT.Summary}
-                img={CAT.Photo.url}
-                link={CAT.Link}
-              />
-            </Carousel.Item>
+            <Slide
+              name={CAT.Name}
+              desc={CAT.Summary}
+              img={CAT.Photo.url}
+              link={CAT.Link}
+              key={key}
+            />
           ))}
-        </Carousel>
+        </Slider>
       </section>
       <section className="home__bottom">
-        <Footer pages={pages} socials={socials} />
+        <Footer pages={pages} socials={socials} copyrights={copy} />
       </section>
     </section>
   );

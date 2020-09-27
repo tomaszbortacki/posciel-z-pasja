@@ -5,15 +5,15 @@ import { Link } from "react-router-dom";
 import LANG from "../../utils/dictionary";
 import { BASE } from "../../utils/api";
 
-const Slider = ({ name, desc, img, link }) => {
+const Slide = ({ name, desc, img, link }) => {
   const Lang = LANG["pl"];
 
   if (desc && desc.length > 120) desc = desc.substring(0, 120) + "...";
 
   return (
-    <article className="slider">
+    <article className="slide">
       {img.length > 0 ? (
-        <figure className="slider__img">
+        <figure className="slide__img">
           <img src={img} alt={name} title={name} />
         </figure>
       ) : (
@@ -31,4 +31,4 @@ const Slider = ({ name, desc, img, link }) => {
   );
 };
 
-export default Slider;
+export default Slide;
