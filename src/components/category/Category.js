@@ -1,7 +1,7 @@
 import React from "react";
 import Footer from "../footer/Footer";
 import { Container } from "react-bootstrap";
-import { API } from "../../utils/api";
+import { API, BASE } from "../../utils/api";
 import { Link } from "react-router-dom";
 import Banner from "../banner/Banner";
 import Description from "../description/Description";
@@ -28,7 +28,11 @@ const Category = ({ category, products, pages, socials, pageTitle }) => {
         <section className="category__products">
           {products.map((product, key) => (
             <section className="category-product" key={key}>
-              <Link to={product.Link} alt={product.Name} title={product.Name}>
+              <Link
+                to={`${BASE}/${product.Link}`}
+                alt={product.Name}
+                title={product.Name}
+              >
                 <figure className="category-product__img">
                   {product.Photos[0] ? (
                     <img

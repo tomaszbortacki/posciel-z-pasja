@@ -1,4 +1,4 @@
-const API = "http://192.168.1.10:1337";
+const API = "https://posciel-cms.herokuapp.com";
 const GETTERS = {
   categories: `${API}/categories`,
   products: `${API}/products`,
@@ -6,5 +6,6 @@ const GETTERS = {
   socials: `${API}/socials`,
   contact: `${API}/contact`,
 };
+const BASE = process.env.PUBLIC_URL;
 
-export { API, GETTERS };
+export { API, GETTERS, BASE };

@@ -8,7 +8,7 @@ import Product from "./components/product/Product";
 import Subpage from "./components/subpage/Subpage";
 import Meta from "./components/meta/Meta";
 import { BrowserRouter as Router, Switch, Route } from "react-router-dom";
-import { GETTERS } from "./utils/api";
+import { GETTERS, BASE } from "./utils/api";
 
 function App() {
   const [cat, setCat] = useState([]);
@@ -36,11 +36,11 @@ function App() {
       <Router>
         <Header categories={cat} />
         <Switch>
-          <Route path="/" exact>
+          <Route path={`${BASE}/`} exact>
             <Home pages={pages} socials={socials} categories={cat} />
           </Route>
           {pages.map((page, key) => (
-            <Route path={`/${page.Link}`} key={key}>
+            <Route path={`${BASE}/${page.Link}`} key={key}>
               <Subpage
                 subpage={page}
                 pages={pages}
@@ -50,7 +50,7 @@ function App() {
             </Route>
           ))}
           {cat.map((CAT, key) => (
-            <Route path={`/${CAT.Link}`} key={key}>
+            <Route path={`${BASE}/${CAT.Link}`} key={key}>
               <Category
                 category={CAT}
                 products={CAT.products}
@@ -61,7 +61,7 @@ function App() {
             </Route>
           ))}
           {products.map((product, key) => (
-            <Route path={`/${product.Link}`} key={key}>
+            <Route path={`${BASE}/${product.Link}`} key={key}>
               <Product
                 product={product}
                 pages={pages}

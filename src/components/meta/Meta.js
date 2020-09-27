@@ -1,11 +1,11 @@
 import React from "react";
-import { API } from "../../utils/api";
+import { API, BASE } from "../../utils/api";
 import { Helmet } from "react-helmet";
 
 const Meta = ({ title, description, image, imageAlt }) => {
-  console.log(`${API}${image}`);
   return (
     <Helmet>
+      <base href={BASE} />
       <title>{title}</title>
       {/* <meta name="description" content={description} /> */}
       <meta property="og:title" content={title} />
