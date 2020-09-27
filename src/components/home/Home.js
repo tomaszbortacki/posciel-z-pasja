@@ -1,5 +1,4 @@
 import React, { useState } from "react";
-import { API } from "../../utils/api";
 import Slider from "../slider/Slider";
 import Carousel from "react-bootstrap/Carousel";
 import Footer from "../footer/Footer";
@@ -10,6 +9,7 @@ const Home = ({ pages, socials, categories }) => {
   const handleSelect = (selectedIndex, e) => {
     setIndex(selectedIndex);
   };
+  console.log(categories);
 
   return (
     <section className="home">
@@ -19,8 +19,8 @@ const Home = ({ pages, socials, categories }) => {
             <Carousel.Item key={key}>
               <Slider
                 name={CAT.Name}
-                desc={CAT.Summary}
-                img={`${API}${CAT.Photo.url}`}
+                desc={CAT.Description}
+                img={CAT.Photo.url}
                 link={CAT.Link}
               />
             </Carousel.Item>

@@ -1,7 +1,7 @@
 import React from "react";
 import Footer from "../footer/Footer";
 import { Container } from "react-bootstrap";
-import { API, BASE } from "../../utils/api";
+import { BASE } from "../../utils/api";
 import { Link } from "react-router-dom";
 import Banner from "../banner/Banner";
 import Description from "../description/Description";
@@ -36,7 +36,7 @@ const Category = ({ category, products, pages, socials, pageTitle }) => {
                 <figure className="category-product__img">
                   {product.Photos[0] ? (
                     <img
-                      src={`${API}${product.Photos[0].url}`}
+                      src={product.Photos[0].url}
                       alt={product.Photos[0].alternativeText}
                       title={product.Photos[0].alternativeText}
                     />

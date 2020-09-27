@@ -1,5 +1,4 @@
 import React from "react";
-import { API } from "../../utils/api";
 import SimpleReactLightbox, { SRLWrapper } from "simple-react-lightbox";
 
 const Gallery = ({ photos }) => {
@@ -9,7 +8,7 @@ const Gallery = ({ photos }) => {
         <SRLWrapper>
           {photos.map((photo, key) => (
             <a
-              href={`${API}${photo.url}`}
+              href={photo.url}
               className="gallery--img"
               key={key}
               data-attribute="SRL"
@@ -18,7 +17,7 @@ const Gallery = ({ photos }) => {
             >
               <div className="cover"></div>
               <img
-                src={`${API}${photo.formats.small.url}`}
+                src={photo.formats.small.url}
                 alt={photo.alternativeText}
                 title={photo.alternativeText}
               />

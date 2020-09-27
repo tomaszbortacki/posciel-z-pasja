@@ -1,6 +1,5 @@
 import React from "react";
 import { Container } from "react-bootstrap";
-import { API } from "../../utils/api";
 
 const Banner = ({ element, photos }) => {
   const PHOTOS = Array.isArray(photos) ? photos : [photos];
@@ -10,7 +9,7 @@ const Banner = ({ element, photos }) => {
       {PHOTOS[0] ? (
         <figure className="banner--img">
           <img
-            src={`${API}${PHOTOS[0].url}`}
+            src={PHOTOS[0].url}
             alt={PHOTOS[0].alternativeText}
             title={PHOTOS[0].alternativeText}
           />
