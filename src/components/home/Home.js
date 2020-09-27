@@ -19,7 +19,7 @@ const Home = ({ pages, socials, categories }) => {
             <Carousel.Item key={key}>
               <Slider
                 name={CAT.Name}
-                desc={CAT.Description}
+                desc={CAT.Summary}
                 img={CAT.Photo.url}
                 link={CAT.Link}
               />
