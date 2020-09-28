@@ -1,94 +1,93 @@
 .cta {
+  position: relative;
+  overflow: hidden;
+  @include default-margin;
+
+  &__wrapper {
     position: relative;
-    overflow: hidden;
-    @include default-margin;
+    z-index: 1;
+    display: grid;
+    grid-template-columns: 1fr;
 
-    &__wrapper {
-        position: relative;
-        z-index: 1;
-        display: grid;
-        grid-template-columns: 1fr;
-
-        @media #{$xl} {
-            grid-template-columns: 1fr 1fr;
-        }
-
-        &--top {
-            text-align: center;
-            padding: 2rem;
-
-            @media #{$xl} {
-                grid-column-start: 1;
-                grid-column-end: 3;
-            }
-
-            h1 {
-                color: $c4;
-                @include main-text(42px, 54px, "text", 400, false, true);
-            }
-        }
-            
-
-        .link {
-            display: block;
-            padding: 1rem;
-            --w: 30px;
-            display: grid;
-            align-items: center;
-            text-decoration: none;
-            background-color: $c3;
-            transition: background-color $e1;
-            will-change: background-color;
-            position: relative;
-        
-            img {
-                width: var(--w);
-                height: var(--w);
-                transition: transform $e1, filter $e1;
-                will-change: transform, filter;
-            }
-
-            span {
-                color: $c1;
-                transition: transform $e1, filter $e1;
-                will-change: transform, filter;
-            }
-
-            @media #{$mxl} {
-                overflow: hidden;
-                background-color: $c4;
-                
-                img {
-                    position: absolute;
-                    bottom: 0px;
-                    right: 0px;
-                    transform: scale(2);
-                    opacity: .1;
-                }
-
-                &:last-child {
-                    margin-top: 1rem;
-                }
-            }
-
-            @media #{$xl} {
-                padding: 1.3rem 2rem;
-                grid-gap: 1rem;
-                gap: 1rem;
-                grid-template-columns: var(--w) 1fr;
-
-                &:hover {
-                    background-color: $c4;
-                    img {
-                        transform: scale(1.2);
-                        filter: drop-shadow($s1);
-                    }
-                    span {
-                        transform: translateX(1rem);
-                        filter: drop-shadow($s1);
-                    }
-                }
-            }
-        }
+    @media #{$xl} {
+      grid-template-columns: 1fr 1fr;
     }
+
+    &--top {
+      text-align: center;
+      padding: 2rem;
+
+      @media #{$xl} {
+        grid-column-start: 1;
+        grid-column-end: 3;
+      }
+
+      h1 {
+        color: $c4;
+        @include main-text(42px, 54px, "text", 400, false, true);
+      }
+    }
+
+    .link {
+      display: block;
+      padding: 1rem;
+      --w: 30px;
+      display: grid;
+      align-items: center;
+      text-decoration: none;
+      background-color: $c3;
+      transition: background-color $e1;
+      will-change: background-color;
+      position: relative;
+
+      img {
+        width: var(--w);
+        height: var(--w);
+        transition: transform $e1, filter $e1;
+        will-change: transform, filter;
+      }
+
+      span {
+        color: $c1;
+        transition: transform $e1, filter $e1;
+        will-change: transform, filter;
+      }
+
+      @media #{$mxl} {
+        overflow: hidden;
+        background-color: $c4;
+
+        img {
+          position: absolute;
+          bottom: 0px;
+          right: 0px;
+          transform: scale(2);
+          opacity: 0.1;
+        }
+
+        &:last-child {
+          margin-top: 1rem;
+        }
+      }
+
+      @media #{$xl} {
+        padding: 1.3rem 2rem;
+        grid-gap: 1rem;
+        gap: 1rem;
+        grid-template-columns: var(--w) 1fr;
+
+        &:hover {
+          background-color: $c4;
+          img {
+            transform: scale(1.2);
+            filter: drop-shadow($s1);
+          }
+          span {
+            transform: translateX(1rem);
+            filter: drop-shadow($s1);
+          }
+        }
+      }
+    }
+  }
 }

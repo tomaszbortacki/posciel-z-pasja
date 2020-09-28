@@ -12,6 +12,10 @@
     will-change: opacity;
     overflow: auto;
 
+    @media #{$xl} {
+        display: none;
+    }
+
     &.active {
         opacity: 1;
         pointer-events: all;

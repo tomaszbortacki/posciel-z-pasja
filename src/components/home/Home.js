@@ -10,12 +10,11 @@ const Home = ({ pages, socials, categories, copy }) => {
     arrows: false,
     dots: true,
     infinite: true,
-    speed: 900,
+    speed: 1000,
     slidesToShow: 1,
     slidesToScroll: 1,
     autoplay: true,
     autoplaySpeed: 3000,
-    cssEase: "cubic-bezier(0.7, 0, 0.3, 1)",
   };
 
   return (
