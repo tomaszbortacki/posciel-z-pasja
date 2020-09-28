@@ -6,6 +6,6 @@ const GETTERS = {
   socials: `${API}/socials`,
   contact: `${API}/contact`,
 };
-const BASE = ""; /*|| process.env.PUBLIC_URL*/
+const BASE = process.env.PUBLIC_URL;
 
 export { API, GETTERS, BASE };

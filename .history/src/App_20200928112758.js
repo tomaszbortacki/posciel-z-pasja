@@ -9,7 +9,7 @@ import Product from "./components/product/Product";
 import Subpage from "./components/subpage/Subpage";
 import MobileMenu from "./components/mobile/MobileMenu";
 import Meta from "./components/meta/Meta";
-import { HashRouter as Router, Switch, Route } from "react-router-dom";
+import { hashRouter as Router, Switch, Route } from "react-router-dom";
 import { GETTERS, BASE } from "./utils/api";
 import Favicon from "react-favicon";
 
