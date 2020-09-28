@@ -1,27 +1,27 @@
 self.__precacheManifest = (self.__precacheManifest || []).concat([
   {
-    "revision": "3832088f26e86addca8b56846a5ab134",
+    "revision": "a4bfb61d38c607030810da99512c1945",
     "url": "/posciel-z-pasja/index.html"
   },
   {
-    "revision": "9762cc4c46b4ebb44ea2",
+    "revision": "2133e94aa784f52502d3",
     "url": "/posciel-z-pasja/static/css/2.21625e18.chunk.css"
   },
   {
-    "revision": "caa1411db8aa5af68303",
+    "revision": "9fd97a508afc45af7a12",
     "url": "/posciel-z-pasja/static/css/main.ff9ca525.chunk.css"
   },
   {
-    "revision": "9762cc4c46b4ebb44ea2",
-    "url": "/posciel-z-pasja/static/js/2.49676dec.chunk.js"
+    "revision": "2133e94aa784f52502d3",
+    "url": "/posciel-z-pasja/static/js/2.8c269d42.chunk.js"
   },
   {
     "revision": "d38e447b1f06cb9b62eb8f2d87918c9a",
-    "url": "/posciel-z-pasja/static/js/2.49676dec.chunk.js.LICENSE.txt"
+    "url": "/posciel-z-pasja/static/js/2.8c269d42.chunk.js.LICENSE.txt"
   },
   {
-    "revision": "caa1411db8aa5af68303",
-    "url": "/posciel-z-pasja/static/js/main.0fa5dec3.chunk.js"
+    "revision": "9fd97a508afc45af7a12",
+    "url": "/posciel-z-pasja/static/js/main.0293f632.chunk.js"
   },
   {
     "revision": "aad60f6c3639478bb0fd",
