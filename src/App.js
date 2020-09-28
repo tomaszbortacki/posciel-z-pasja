@@ -9,7 +9,7 @@ import Product from "./components/product/Product";
 import Subpage from "./components/subpage/Subpage";
 import MobileMenu from "./components/mobile/MobileMenu";
 import Meta from "./components/meta/Meta";
-import { BrowserRouter as Router, Switch, Route } from "react-router-dom";
+import { HashRouter as Router, Switch, Route } from "react-router-dom";
 import { GETTERS, BASE } from "./utils/api";
 import Favicon from "react-favicon";
 
@@ -38,8 +38,18 @@ function App() {
   return (
     <section className="app">
       {contact.Favicon ? <Favicon url={contact.Favicon.url} /> : ""}
-      <Meta title={contact.Title} />
-      <Router>
+      {contact ? (
+        <Meta
+          title={contact.Title}
+          description="Strona z pasją do szycia"
+          image="image"
+          imageAlt="image"
+        />
+      ) : (
+        ""
+      )}
+
+      <Router hashType="slash">
         <ScrollToTop setMobileActive={setMobileActive} />
         <MobileMenu
           categories={cat}

@@ -1,64 +1,63 @@
 .home {
+  @media #{$xl} {
+    display: grid;
+    grid-template-rows: minmax(700px, 1fr) 100px;
+    min-height: 100vh;
+  }
 
-    @media #{$xl} {
-        display: grid;
-        grid-template-rows: minmax(700px, 1fr) 100px;
-        min-height: 100vh;
-    }
+  &__top {
+    width: 100%;
+    overflow: hidden;
+    position: relative;
 
-    &__top {
-        width: 100%;
-        overflow: hidden;
-        position: relative;
+    .slick-slider {
+      height: 100%;
+      .slick-list {
+        height: 100%;
 
-        .slick-slider {
+        .slick-track {
+          display: flex !important;
+
+          @media #{$xl} {
             height: 100%;
-            .slick-list {
-                height: 100%;
+          }
 
-                .slick-track {
-                    display: flex !important;
+          .slick-slide {
+            height: inherit !important;
 
-                    @media #{$xl} {
-                        height: 100%;
-                    }
-    
-                    .slick-slide {
-                        height: inherit !important;
-
-                        div {
-                            height: 100%;
-                        }
-                    }
-                }
+            div {
+              height: 100%;
             }
-
-            .slick-dots {
-                position: absolute;
-                bottom: 2rem;
-                left: 0;
-                width: 100%;
-
-                li {
-                    width: 2.5rem;
-                    height: 0.3rem;
-                    background-color: transparentize($c1, 0.7);
-                    transition: background-color $e1;
-                    will-change: background-color;
-                    
-                    button {
-                        width: 100%;
-                        height: 100%;
-                        &::before {
-                            display: none !important;
-                        }
-                    }
-
-                    &.slick-active {
-                        background-color: $c1;
-                    }
-                }
-            }
+          }
         }
+      }
+
+      .slick-dots {
+        position: absolute;
+        bottom: 2rem;
+        left: 0;
+        width: 100%;
+
+        li {
+          width: 2.5rem;
+          height: 0.3rem;
+          background-color: transparentize($c1, 0.7);
+          transition: background-color $e1;
+          will-change: background-color;
+
+          button {
+            width: 100%;
+            height: 100%;
+            &::before {
+              display: none !important;
+            }
+          }
+
+          &.slick-active {
+            background-color: $c1;
+          }
+        }
+      }
     }
+  }
 }
