@@ -25,7 +25,7 @@ const Home = ({ pages, socials, categories, copy }) => {
             <Slide
               name={CAT.Name}
               desc={CAT.Summary}
-              img={CAT.Photo.url}
+              img={CAT.Photo ? CAT.Photo.url : ""}
               link={CAT.Link}
               key={key}
             />
