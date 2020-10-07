@@ -1,6 +1,6 @@
 self.__precacheManifest = (self.__precacheManifest || []).concat([
   {
-    "revision": "b5f300a3f6b6fe330a9897497e57163b",
+    "revision": "83338cc23aec1a196b5a77646ea39064",
     "url": "/posciel-z-pasja/index.html"
   },
   {
@@ -8,8 +8,8 @@ self.__precacheManifest = (self.__precacheManifest || []).concat([
     "url": "/posciel-z-pasja/static/css/2.21625e18.chunk.css"
   },
   {
-    "revision": "41d23d3e1baf471c556b",
-    "url": "/posciel-z-pasja/static/css/main.6336d290.chunk.css"
+    "revision": "df25c85314d15b5eefae",
+    "url": "/posciel-z-pasja/static/css/main.369f55f6.chunk.css"
   },
   {
     "revision": "3fa78d7b11884b52319e",
@@ -20,7 +20,7 @@ self.__precacheManifest = (self.__precacheManifest || []).concat([
     "url": "/posciel-z-pasja/static/js/2.00f6dcc8.chunk.js.LICENSE.txt"
   },
   {
-    "revision": "41d23d3e1baf471c556b",
+    "revision": "df25c85314d15b5eefae",
     "url": "/posciel-z-pasja/static/js/main.87930534.chunk.js"
   },
   {
