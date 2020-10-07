@@ -3,7 +3,7 @@
   background-color: $c1;
   padding: 2rem 0;
 
-  .container {
+  &__top {
     height: 100%;
     display: flex;
     justify-content: space-between;
@@ -72,13 +72,21 @@
       }
     }
   }
+
+  &__bottom {
+    text-align: center;
+
+    @media #{$xl} {
+      text-align: right;
+    }
+  }
 }
 
 .product,
 .category {
   .footer {
     background-color: $c4;
-
+    color: $c1;
     .link,
     .copyrights {
       color: $c1;

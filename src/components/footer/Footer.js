@@ -5,22 +5,37 @@ const Footer = ({ socials, copyrights }) => {
   return (
     <footer className="footer">
       <Container>
-        <section>
-          {socials.map((social, key) => (
+        <section className="footer__top">
+          <section>
+            {socials.map((social, key) => (
+              <a
+                href={social.Link}
+                target="_blank"
+                rel="noopener noreferrer"
+                className="link"
+                title={social.Name}
+                alt={social.Name}
+                key={key}
+              >
+                {social.Name}
+              </a>
+            ))}
+          </section>
+          <p className="copyrights">{copyrights}</p>
+        </section>
+        <section className="footer__bottom">
+          <p>
+            Created by:{" "}
             <a
-              href={social.Link}
+              className="link"
+              href="https://www.linkedin.com/in/tomasz-bortacki-04bb96197/"
               target="_blank"
               rel="noopener noreferrer"
-              className="link"
-              title={social.Name}
-              alt={social.Name}
-              key={key}
             >
-              {social.Name}
+              Tomasz Bortacki
             </a>
-          ))}
+          </p>
         </section>
-        <p className="copyrights">{copyrights}</p>
       </Container>
     </footer>
   );

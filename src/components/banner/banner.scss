@@ -29,6 +29,16 @@
       width: 130%;
       object-fit: cover;
       filter: brightness(0.3);
+      animation: imageAnim $e1;
+    }
+
+    @keyframes imageAnim {
+      from {
+        opacity: 0;
+      }
+      to {
+        opacity: 1;
+      }
     }
   }
 
