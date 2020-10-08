@@ -14,7 +14,7 @@
 importScripts("https://storage.googleapis.com/workbox-cdn/releases/4.3.1/workbox-sw.js");
 
 importScripts(
-  "/posciel-z-pasja/precache-manifest.118537b467fe7d6a11e7b223a169ce02.js"
+  "/posciel-z-pasja/precache-manifest.a9feb25b9ba34ccf63d4ab64f0b32f2f.js"
 );
 
 self.addEventListener('message', (event) => {
