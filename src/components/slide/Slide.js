@@ -23,7 +23,7 @@ const Slide = ({ name, desc, img, link }) => {
       <Container>
         <h1>{name}</h1>
         {desc ? <p className="main-text-1">{desc}</p> : ""}
-        <Link to={`${BASE}/${link}`} className="link" title={name} alt={name}>
+        <Link to={`${BASE}/category/${link}`} className="link" title={name} alt={name}>
           {Lang.seeMore}
         </Link>
       </Container>
