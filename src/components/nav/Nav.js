@@ -7,7 +7,7 @@ const Nav = ({ categories, pages }) => {
     <nav className="nav">
       {categories.map((cat, key) => (
         <NavLink
-          to={`${BASE}/${cat.Link}`}
+          to={`${BASE}/category/${cat.Link}`}
           className="link"
           activeClassName="active"
           title={cat.Name}

@@ -29,7 +29,7 @@ const Category = ({ category, products, pages, socials, pageTitle, copy }) => {
           {products.map((product, key) => (
             <section className="category-product" key={key}>
               <Link
-                to={`${BASE}/${product.Link}`}
+                to={`${BASE}/product/${product.Link}`}
                 alt={product.Name}
                 title={product.Name}
               >

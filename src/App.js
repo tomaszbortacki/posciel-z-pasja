@@ -83,7 +83,7 @@ function App() {
             </Route>
           ))}
           {cat.map((CAT, key) => (
-            <Route path={`${BASE}/${CAT.Link}`} key={key}>
+            <Route path={`${BASE}/category/${CAT.Link}`} key={key}>
               <Category
                 category={CAT}
                 products={CAT.products}
@@ -95,7 +95,7 @@ function App() {
             </Route>
           ))}
           {products.map((product, key) => (
-            <Route path={`${BASE}/${product.Link}`} key={key}>
+            <Route path={`${BASE}/product/${product.Link}`} key={key}>
               <Product
                 product={product}
                 pages={pages}
