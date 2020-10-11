@@ -17,6 +17,10 @@ const Home = ({ pages, socials, categories, copy }) => {
     autoplaySpeed: 3000,
   };
 
+  categories.map((CAT, key) => (
+    console.log(CAT.id)
+  ));
+
   return (
     <section className="home">
       <section className="home__top">

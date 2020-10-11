@@ -82,7 +82,7 @@ function App() {
               />
             </Route>
           ))}
-          {cat.map((CAT, key) => (
+          {cat.sort(({ id: previousID }, { id: currentID }) => previousID - currentID).map((CAT, key) => (
             <Route path={`${BASE}/category/${CAT.Link}`} key={key}>
               <Category
                 category={CAT}
