@@ -1,4 +1,4 @@
-// Colors 
+// Colors
 
 $c1: #fff;
 $c2: #000;
@@ -9,7 +9,7 @@ $c6: #333;
 
 // Shadow
 
-$s1: 0 20px 50px rgba(0, 0, 0, .05);
+$s1: 0 20px 50px rgba(0, 0, 0, 0.05);
 
 // Radius
 
@@ -20,6 +20,7 @@ $r1: 20px;
 $e1: 0.3s ease;
 $e2: 0.7s ease;
 $e3: 0.03s ease;
+$e4: 1s ease;
 
 /* ZMIENNE DLA MEDIA QUERIES */
 $msm: "only screen and (max-width : 575px)";
@@ -40,15 +41,15 @@ $hlg: "only screen and (min-width : 1800px)";
 $hxlg: "only screen and (min-width : 1921px)";
 
 .container {
-    @media #{$sl} {
-        max-width: 1230px;
-    }
+  @media #{$sl} {
+    max-width: 1230px;
+  }
 
-    @media #{$xxl} {
-        max-width: 1300px;
-    }
+  @media #{$xxl} {
+    max-width: 1300px;
+  }
 
-    @media #{$hxlg} {
-        max-width: 1500px;
-    }
+  @media #{$hxlg} {
+    max-width: 1500px;
+  }
 }
