@@ -1,0 +1,43 @@
+ssh
+91.194.228.32
+root
+22089900
+
+
+server {
+        listen 80;
+        listen [::]:80;
+
+        root /var/www/strona.poscielzpasja.pl;
+        index index.html index.htm index.nginx-debian.html;
+
+        server_name strona.poscielzpasja.pl www.strona.poscielzpasja.pl;
+
+        location / {
+                try_files $uri /index.html;
+        }
+
+        location ~ .(static)/(js|css|media)/(.+)$ {
+                try_files $uri $uri/ /$1/$2/$3;
+        }
+
+        error_page   500 502 503 504  /50x.html;
+        location = /50x.html {
+                root   /usr/share/nginx/html;
+        }
+}
+
+server {
+        listen 80;
+        listen [::]:80;
+
+        root /var/api/build;
+        index index.html index.htm index.nginx-debian.html;
+
+        server_name api.poscielzpasja.pl api.poscielzpasja.pl;
+
+        location / {
+                try_files $uri /index.html;
+        }
+}
+

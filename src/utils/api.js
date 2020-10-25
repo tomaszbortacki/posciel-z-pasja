@@ -1,4 +1,4 @@
-const API = "https://posciel-cms.herokuapp.com";
+const API = "http://api.poscielzpasja.pl";
 const GETTERS = {
   categories: `${API}/categories`,
   products: `${API}/products`,
@@ -6,6 +6,6 @@ const GETTERS = {
   socials: `${API}/socials`,
   contact: `${API}/contact`,
 };
-const BASE = ""; /*|| process.env.PUBLIC_URL*/
+const BASE = process.env.PUBLIC_URL; /*|| process.env.PUBLIC_URL*/
 
 export { API, GETTERS, BASE };

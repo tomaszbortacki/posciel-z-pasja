@@ -1,0 +1,11 @@
+.progressBar {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 0%;
+  height: 5px;
+  background-color: $c4;
+  z-index: 1000;
+  will-change: width;
+  transition: width 0.05s ease;
+}

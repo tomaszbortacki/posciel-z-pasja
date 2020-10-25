@@ -14,7 +14,33 @@ const Home = ({ pages, socials, categories, copy }) => {
     slidesToShow: 1,
     slidesToScroll: 1,
     autoplay: true,
-    autoplaySpeed: 3000,
+    autoplaySpeed: 7000,
+    responsive: [
+      {
+        breakpoint: 576,
+        settings: {
+          autoplaySpeed: 6000,
+        }
+      },
+      {
+        breakpoint: 768,
+        settings: {
+          autoplaySpeed: 5000,
+        }
+      },
+      {
+        breakpoint: 992,
+        settings: {
+          autoplaySpeed: 4000,
+        }
+      },
+      {
+        breakpoint: 1200,
+        settings: {
+          autoplaySpeed: 3000,
+        }
+      },
+    ]
   };
 
   return (
@@ -25,7 +51,7 @@ const Home = ({ pages, socials, categories, copy }) => {
             <Slide
               name={CAT.Name}
               desc={CAT.Summary}
-              img={CAT.Photo ? CAT.Photo.url : ""}
+              img={CAT.Cover ? CAT.Cover.url : ""}
               link={CAT.Link}
               key={key}
             />

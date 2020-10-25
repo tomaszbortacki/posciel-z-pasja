@@ -9,8 +9,8 @@ import Product from "./components/product/Product";
 import Subpage from "./components/subpage/Subpage";
 import MobileMenu from "./components/mobile/MobileMenu";
 import Meta from "./components/meta/Meta";
-import { HashRouter as Router, Switch, Route } from "react-router-dom";
-import { GETTERS, BASE } from "./utils/api";
+import { BrowserRouter as Router, Switch, Route } from "react-router-dom";
+import { API, GETTERS, BASE } from "./utils/api";
 import Favicon from "react-favicon";
 
 function App() {
@@ -37,7 +37,7 @@ function App() {
 
   return (
     <section className="app">
-      {contact.Favicon ? <Favicon url={contact.Favicon.url} /> : ""}
+      {contact.Favicon ? <Favicon url={`${API}${contact.Favicon.url}`} /> : ""}
       {contact ? (
         <Meta
           title={contact.Title}
@@ -49,7 +49,7 @@ function App() {
         ""
       )}
 
-      <Router basename="/">
+      <Router>
         <ScrollToTop setMobileActive={setMobileActive} />
         <MobileMenu
           categories={cat}
@@ -83,7 +83,7 @@ function App() {
             </Route>
           ))}
           {cat.sort(({ id: previousID }, { id: currentID }) => previousID - currentID).map((CAT, key) => (
-            <Route path={`${BASE}/category/${CAT.Link}`} key={key}>
+            <Route path={`${BASE}/kategoria/${CAT.Link}`} key={key}>
               <Category
                 category={CAT}
                 products={CAT.products}
@@ -95,7 +95,7 @@ function App() {
             </Route>
           ))}
           {products.map((product, key) => (
-            <Route path={`${BASE}/product/${product.Link}`} key={key}>
+            <Route path={`${BASE}/produkt/${product.Link}`} key={key}>
               <Product
                 product={product}
                 pages={pages}

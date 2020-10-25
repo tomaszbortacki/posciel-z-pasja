@@ -2,6 +2,8 @@
   height: 100%;
   background-color: $c1;
   padding: 2rem 0;
+  background-color: $c4;
+  color: $c1;
 
   &__top {
     height: 100%;
@@ -20,46 +22,12 @@
       }
     }
 
-    .link {
-      color: $c3;
-      font-weight: 400;
-      font-size: 16px;
-      line-height: 100%;
-      letter-spacing: 0.3px;
-      text-decoration: none !important;
-      transition: color 0.3s ease;
-      will-change: color;
-      position: relative;
-
-      &::after {
-        content: "";
-        position: absolute;
-        left: 0;
-        bottom: 0;
-        width: 100%;
-        height: 1px;
-        background-color: $c4;
-        opacity: 0;
-        transform: translateY(0);
-        transition: opacity $e1, transform $e1;
-        will-change: opacity, transform;
-      }
+    .link,
+    .copyrights {
+      color: $c1;
 
       &:hover {
-        color: $c4;
-
-        &::after {
-          opacity: 1;
-          transform: translateY(4px);
-        }
-      }
-    }
-
-    section {
-      &:first-child {
-        .link {
-          margin-right: 3rem;
-        }
+        color: $c1;
       }
     }
 
@@ -71,34 +39,62 @@
         margin-top: 1rem;
       }
     }
-  }
 
-  &__bottom {
-    text-align: center;
+    &--left {
+      .link {
+        display: inline-block;
+        padding: 0.7rem 1.5rem;
+        color: $c2 !important;
+        @include default-animation("");
+        background-color: $c1;
 
-    @media #{$xl} {
-      text-align: right;
-    }
-  }
-}
-
-.product,
-.category {
-  .footer {
-    background-color: $c4;
-    color: $c1;
-    .link,
-    .copyrights {
-      color: $c1;
-
-      &:hover {
-        color: $c1;
+        &:not(:last-child) {
+          margin-right: 1rem;
+        }
       }
     }
 
-    .link {
-      &::after {
-        background-color: $c1;
+    &--right {
+      text-align: center;
+
+      @media #{$xl} {
+        text-align: right;
+      }
+
+      * {
+        margin-bottom: 0;
+      }
+
+      .link {
+        font-weight: 400;
+        font-size: 16px;
+        line-height: 100%;
+        letter-spacing: 0.3px;
+        text-decoration: none !important;
+        transition: color 0.3s ease;
+        will-change: color;
+        position: relative;
+
+        &::after {
+          content: "";
+          position: absolute;
+          left: 0;
+          bottom: 0;
+          width: 100%;
+          height: 1px;
+          background-color: $c1;
+          opacity: 0;
+          transform: translateY(0);
+          transition: opacity $e1, transform $e1;
+          will-change: opacity, transform;
+        }
+
+        &:hover {
+          &::after {
+            opacity: 1;
+            transform: translateY(4px);
+          }
+        }
       }
     }
   }

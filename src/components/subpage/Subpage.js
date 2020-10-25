@@ -16,13 +16,13 @@ const Subpage = ({ subpage, pages, socials, pageTitle, copy }) => {
       />
       <Banner element={subpage} />
       <Container>
+        {subpage.Description ? (
         <section className="subpage__desc">
-          {subpage.Description ? (
             <Description desc={subpage.Description} />
-          ) : (
-            ""
-          )}
         </section>
+        ) : (
+          ""
+        )}
       </Container>
       <Footer pages={pages} socials={socials} copyrights={copy} />
     </main>

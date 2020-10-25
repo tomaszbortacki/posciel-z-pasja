@@ -6,7 +6,7 @@ const Footer = ({ socials, copyrights }) => {
     <footer className="footer">
       <Container>
         <section className="footer__top">
-          <section>
+          <section className="footer__top--left">
             {socials.map((social, key) => (
               <a
                 href={social.Link}
@@ -21,20 +21,20 @@ const Footer = ({ socials, copyrights }) => {
               </a>
             ))}
           </section>
-          <p className="copyrights">{copyrights}</p>
-        </section>
-        <section className="footer__bottom">
-          <p>
-            Created by:{" "}
-            <a
-              className="link"
-              href="https://www.linkedin.com/in/tomasz-bortacki-04bb96197/"
-              target="_blank"
-              rel="noopener noreferrer"
-            >
-              Tomasz Bortacki
-            </a>
-          </p>
+          <section className="footer__top--right">
+            <p className="copyrights">{copyrights}</p>
+            <p>
+              Created by:{" "}
+              <a
+                className="link"
+                href="https://www.linkedin.com/in/tomasz-bortacki-04bb96197/"
+                target="_blank"
+                rel="noopener noreferrer nofollow"
+              >
+                Tomasz Bortacki
+              </a>
+            </p>
+          </section>
         </section>
       </Container>
     </footer>

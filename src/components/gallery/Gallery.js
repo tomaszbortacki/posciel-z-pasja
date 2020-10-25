@@ -1,6 +1,7 @@
 import React from "react";
 import SimpleReactLightbox, { SRLWrapper } from "simple-react-lightbox";
 import Search from "../../images/search.svg";
+import { API } from "../../utils/api";
 
 const Gallery = ({ photos }) => {
   return (
@@ -9,7 +10,7 @@ const Gallery = ({ photos }) => {
         <SRLWrapper>
           {photos.map((photo, key) => (
             <a
-              href={photo.url}
+              href={`${API}${photo.url}`}
               className="gallery--img"
               key={key}
               data-attribute="SRL"
@@ -21,7 +22,7 @@ const Gallery = ({ photos }) => {
                 style={{ backgroundImage: `url('${Search}')` }}
               ></div>
               <img
-                src={photo.formats.small.url}
+                src={`${API}${photo.formats.small.url}`}
                 alt={photo.alternativeText}
                 title={photo.alternativeText}
               />

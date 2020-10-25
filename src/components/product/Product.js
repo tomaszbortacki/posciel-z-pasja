@@ -6,10 +6,12 @@ import Description from "../description/Description";
 import Gallery from "../gallery/Gallery";
 import Cta from "../cta/Cta";
 import Meta from "../meta/Meta";
+import ProgressBar from "../progressBar/ProgressBar";
 
 const Product = ({ product, pages, socials, contact, pageTitle, copy }) => {
   return (
     <main className="product">
+      <ProgressBar />
       <Meta
         title={`${product.Name} - ${pageTitle}`}
         description={product.Description ? product.Description : ""}
