@@ -2,4 +2,4 @@
 
 `Pościel z Pasją`
 
-Link: [Strona główna](https://tomaszbortacki.github.io/posciel-z-pasja/#/)
+Link: [Strona główna](https://poscielzpasja.pl/)
