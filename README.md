@@ -4,6 +4,4 @@ Strona wykonana na zlecenie.
 
 `Przeznaczenie:` Portfolio
 
-`Pościel z Pasją`
-
-Link: [Strona główna](https://poscielzpasja.pl/)
+## [Pościel z Pasją](https://poscielzpasja.pl/)
