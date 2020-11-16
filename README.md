@@ -1,7 +1,5 @@
-# Strona poświęcona szyciu
+# Website dedicated to sewing `Portfolio`
+Commissioned website
 
-Strona wykonana na zlecenie.
-
-`Przeznaczenie:` Portfolio
 
 ## [Pościel z Pasją](https://poscielzpasja.pl/)
