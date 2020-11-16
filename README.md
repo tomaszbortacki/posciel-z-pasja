@@ -1,6 +1,7 @@
 # Strona poświęcona szyciu
 
-Strona wykonana na zlecenie. 
+Strona wykonana na zlecenie.
+
 `Przeznaczenie:` Portfolio
 
 `Pościel z Pasją`
